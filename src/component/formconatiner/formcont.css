@@ -1,0 +1,19 @@
+.background-deco{
+
+}
+
+.mng{
+    max-width: 70vw;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.backgnd{
+    background-color: #6964ff;
+    color: aliceblue;
+}
+
+.backgnd:hover{
+    background-color: #6964ff;
+    color: aliceblue;
+}

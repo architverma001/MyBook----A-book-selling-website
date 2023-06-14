@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+.formContainer{
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(220, 243, 245);
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.manager{
+  min-height: 80vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width:1000px) {
+  .formContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    }
+}
+.formWrapper{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.formWrapper>form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(164, 164, 255);
+  padding: 12px;
+  border-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.formWrapper>form>input{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue;
+  padding: 6px;
+  margin: 6px;
+  width: 80vw;
+  max-width: 650px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+ 
+}
+
+.formWrapper>form>button{
+  border-radius: 12px;
+  background-color:rgb(24, 135, 254) !important;
+  border: 1px solid rgb(1, 251, 255);
+  padding: 10px;
+  color: aliceblue;
+}
+
+.logo{
+  color: rgb(59, 11, 220);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navigate{
+  color: aliceblue;
+}
+
+.title{
+  color: aliceblue;
+  font-weight: 500;
 }

@@ -1,0 +1,131 @@
+.img{
+    max-width: 99vw;
+    max-height: 70vh;
+
+}
+
+.swap{
+    flex-direction: row-reverse;
+    transition: opacity 2s ease, transform 2s ease;
+    transition-duration: 1s;
+    transition-delay: 1s;
+}
+
+.centrify{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+}
+
+.align-text{
+    text-align: center;
+    padding: 12px;
+}
+
+.back-quotes{
+    background-color: rgb(2, 22, 107);
+    color: aliceblue;
+    width: 140px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+.newclass{
+    background-color: rgb(2, 22, 107);
+    color: aliceblue;
+    width: 250px;
+    height: 60px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    text-align: center; 
+}
+
+.handle-width{
+    width: 90vw;
+    max-width: 800px;
+    margin-top: 12px;
+}
+
+
+.reviewmanager{
+   display: flex;
+    justify-content: end;
+    padding: 12px;
+    font-size: 1.4rem;
+    margin-right: 12px;
+}
+
+.btnmanager{
+    background-color: #6964ff;
+    color: aliceblue;
+}
+
+.btnmanager:hover{
+    background-color: #6964ff !important;
+    color: aliceblue !important;
+}
+
+.formdataz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: auto;
+    border-radius: 12px !important;
+    border: none;
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 12%);
+    background-color: whitesmoke;
+    
+}
+
+
+.alignitemtext{
+    text-align: left;
+    max-width: 90vw;
+    margin: auto;
+    padding: 12px;
+    font-size: 1.05rem;
+    background-color: rgb(162, 245, 231);
+    border-radius: 12px;
+    color: rgb(95, 92, 97);
+}
+
+.students>img{
+    width: 90vw;
+    height: auto;
+    object-fit: cover;
+    margin: 12px;
+}
+
+.managercnt{
+  display: flex;
+  align-items: center;
+    justify-content: center;
+    align-content: center;
+
+}
+.disply{
+    display: flex;
+    margin-right: 0px;
+    padding: 5px;
+}
+.margtin-manager-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

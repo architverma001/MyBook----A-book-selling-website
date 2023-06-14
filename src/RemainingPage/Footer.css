@@ -1,0 +1,62 @@
+.main-d{
+    background-color: rgb(15, 2, 68);
+    color: white;
+    padding: 0px;
+    padding-top: 12px;
+}
+
+.height{
+    height: 5vh;
+    padding: 12px;
+}
+
+
+.wdth{
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.w-18{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+   
+}
+
+.cnt-text{
+    padding: 0px;
+}
+
+.margin-adjust{
+    margin-left: 5px;
+}
+
+.nolink{
+    text-decoration: none;
+    color: white;
+}
+
+.color-adjust{
+    color:rgb(1,255,133);
+}
+
+
+.footer-bottom{
+    background-color: rgb(16,21,34);
+    padding: 12px;
+    text-align: center;
+    margin: 0px;
+}
+
+
+.margin-adjust{
+    margin-right:5px;
+}
+
+@media screen and (max-width:992px) {
+    .marginadj{
+        display: inline;
+    }
+}

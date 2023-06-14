@@ -1,0 +1,82 @@
+.quotes{
+    width: 270px;
+    height: 180px;
+    background-color: rgb(243, 243, 142);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 4px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 2px #c090bf;
+    font-weight: 500;
+    font-size: medium;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.rvw{
+  width: 270px;
+  height: 180px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px 1px #ccc;
+  font-weight: 500;
+  font-size: medium;
+  overflow-y: scroll;
+}
+
+
+.quotes::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .quotes::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .quotes::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+
+  .rvw::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  
+  .rvw::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  .rvw::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
+.portfolio-slider {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+  .quotes-content {
+    overflow-y: scroll;
+    /* Add other desired styles for the content */
+  }

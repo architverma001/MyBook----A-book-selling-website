@@ -37,10 +37,10 @@ const Cod = () => {
     }
     emailjs
       .sendForm(
-        "service_gfqmo3r",
-        "template_wpnxgzj",
+        "service_yvnk47f",
+        "template_5v8xo7r",
         form.current,
-        "iB7NtsdQNYIcIwtbC"
+        "PCj6aiJDsN2VtUGFJ"
       )
       .then(
         (result) => {

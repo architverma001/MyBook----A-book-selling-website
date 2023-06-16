@@ -13,6 +13,7 @@ function Offline() {
     const [states, setStates] = useState([]);
     const [address, setAddress] = useState('');
     const [loading, setLoading] = useState(false);
+    const[load,setload] = useState(false);
    
     useEffect(() => {
       fetchStates();
@@ -54,13 +55,14 @@ function Offline() {
         const querySnapshot = await getDocs(querys);
         const AddressData = querySnapshot.docs.map((doc) => doc.data());
          setAddress(AddressData);
-         console.log(AddressData);
+          {address.length===0 ? setload(true) : setload(false)}
+          setLoading(false);
       
       } catch (error) {
         console.log('An error occurred while fetching books:', error);
       }
       setLoading(false);
-
+      
   
         }
 
@@ -92,12 +94,12 @@ function Offline() {
   
   return (
     <div className='d-flex flex-column '>
-        <div className='d-flex flex-column '>
-    <div className=' mt-4 d-flex flex-column'>
-        <div className='d-flex mb-2 justify-content-center text-align-center '>
-      <p className='me-1 mt-1'>States</p>
+        <div className='d-flex flex-column p-3'>
+    <div className=' mt-4 d-flex flex-column '>
+        <div className='d-flex mb-2 justify-content-center text-align-center'>
+      <p className='me-1 mt-1 ms-1'>States</p>
       <select onChange={(e) => handleStateChange(e.target.value)}>
-       <option value="">Select a state</option>
+       <option value="" className='maxwdt'>Select a state</option>
         {states.map((state, index) => (
           <option key={index} value={state}>
             {state}
@@ -107,9 +109,9 @@ function Offline() {
       </div>
 
       <div className='d-flex justify-content-center text-align-center'>
-      <p className='me-1 mt-1'>Cities</p>
+      <p className='me-1 mt-1 ms-1'>Cities</p>
       <select value={selectedCity} onChange={(e) => handleCityChange(e.target.value)}>
-        <option value="">Select a city</option>
+        <option value="" className='maxwdt'>Select a city</option>
         {cities.map((city, index) => (
           <option key={index} value={city}>
             {city}
@@ -122,15 +124,18 @@ function Offline() {
         <button className='btn mt-2 bg width ms-1'  onClick={handleSubmit}  >submit</button>
         </div>
         </div>
-       {
-        address && address.map((item) => {
-          return(
-            <CardOff Url={item.Url} Address={item.Address} />
-          )
-         
-}
-        )
-       }
+   
+
+{loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          {address.length === 0 && <p>Nothing to display</p>}
+          {address.map((item, index) => (
+            <CardOff key={index} className="mngmt" Url={item.Url} Address={item.Address} />
+          ))}
+        </>
+      )}
     </div>
   );
 }

@@ -46,4 +46,15 @@
     margin: 10px;
     box-shadow: 0px 0px 10px 0px #6964ff;
     
+  
+}
+
+.mngmt{
+    overflow-wrap: break-word;
+    overflow: scroll;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+select{
+    max-width: 80vw !important;
 }

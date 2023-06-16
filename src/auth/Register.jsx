@@ -1,7 +1,16 @@
 import React, { useState } from "react";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
 import { auth, db, storage } from "../firebase";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import {
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 
@@ -10,6 +19,29 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const handleGoogleSignIn = async () => {
+    setLoading(true);
+    try {
+      const provider = new GoogleAuthProvider();
+      const res = await signInWithPopup(auth, provider);
+
+      // Access user information from the response
+      const user = res.user;
+
+      // Update profile
+      await updateProfile(user, {
+        displayName: user.displayName,
+      });
+
+      setLoading(false);
+      navigate("/");
+    } catch (err) {
+      setErr(true);
+      setLoading(false);
+      alert(err.message);
+    }
+  };
+
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
@@ -17,16 +49,20 @@ const Register = () => {
     const email = e.target[1].value;
     const password = e.target[2].value;
 
-
     try {
-      //Create user
+      // Create user
       const res = await createUserWithEmailAndPassword(auth, email, password);
 
-      //Create a unique image name
+      // Update profile
+      await updateProfile(res.user, {
+        displayName: displayName,
+      });
+
+      // Create a unique image name
       const date = new Date().getTime();
       const storageRef = ref(storage, `${displayName + date}`);
-       setLoading(false)
-       navigate('/')
+      setLoading(false);
+      navigate("/");
     } catch (err) {
       setErr(true);
       setLoading(false);
@@ -37,20 +73,9 @@ const Register = () => {
   return (
     <div className="formContainer">
       <div className="formWrapper">
-        <form onSubmit={handleSubmit}>
-        <span className="logo">Lectureb@sket</span>
-        <span className="title">Register</span>
-          <input required type="text" placeholder="display name" />
-          <input required type="email" placeholder="email" />
-          <input required type="password" placeholder="password" />
-         
-          <button disabled={loading}>Sign up</button>
-          {loading && " please wait..."}
-          <p className="navigate">
-          You do have an account? <Link to="/login">Login</Link>
-        </p>
-        </form>
-       
+        <button onClick={handleGoogleSignIn} disabled={loading}>
+          Sign in with Google
+        </button>
       </div>
     </div>
   );

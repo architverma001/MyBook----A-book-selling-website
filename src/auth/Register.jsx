@@ -30,6 +30,7 @@ const Register = () => {
     } catch (err) {
       setErr(true);
       setLoading(false);
+      alert(err.message);
     }
   };
 

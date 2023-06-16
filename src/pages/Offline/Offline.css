@@ -1,0 +1,49 @@
+.bg{
+    background-color: #6964ff;
+    color: aliceblue;
+}
+
+.bg:hover{
+    
+        background-color: #6964ff;
+        color: aliceblue;
+    
+}
+
+.width{
+    width:80px;
+    height:40px;
+}
+
+.wct{
+    width: 100px !important;
+}
+
+.centrify{
+    margin:auto;
+}
+.text-align-center{
+    text-align: center;
+
+}
+
+
+.wdt-mng{
+    width: 90vw;
+    max-height: 50vh;
+    object-fit: contain;
+    margin: auto;
+}
+
+.maxi{
+    max-width: 90vw;
+}
+
+.card{
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px 0px #6964ff;
+    
+}

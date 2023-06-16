@@ -1,0 +1,23 @@
+.wdthN{
+    max-width: 90vw;
+    margin: auto;
+}
+
+p{
+    padding: 2px;
+    margin: 2px;
+}
+
+h4{
+    margin: 2px;
+    padding: 2.5px;
+}
+
+h6{
+    margin: 1px;
+    padding: 2px;
+}
+
+.ml{
+margin-left: 12px;
+}

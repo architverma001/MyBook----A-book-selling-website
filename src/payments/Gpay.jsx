@@ -5,10 +5,15 @@ import { HmacSHA256 } from 'crypto-js';
 
 function Gpay(props) {
   const price = props.offer;
+  
+// make 
 
   const handleOpenRazorpay = async (data) => {
     const options = {
+
+
       key: 'rzp_test_ED1PrWcomjc9mw',
+
       amount: Number(data.order.amount),
       currency: data.order.currency,
       name: 'Acme Corp',
@@ -58,8 +63,8 @@ function Gpay(props) {
   };
 
   return (
-    <button onClick={() => handlePrice(price)} className='btnz'>
-      Pay now
+    <button onClick={() => handlePrice(price)} className='btn bg-body-primary btn-outline-primary ms-1 me-2'>
+     Get Drive
     </button>
   );
 }

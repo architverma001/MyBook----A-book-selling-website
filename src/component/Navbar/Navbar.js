@@ -58,7 +58,7 @@ const searchInputRef = useRef(null);
 
 
     <div className='main-class'>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary colorbg">
+     <nav className="navbar navbar-expand-lg bg-white colorbg">
   <div className="container-fluid">
     <div className="navbar-brand custom" onClick={handleit} >Lecturesbasket.com</div>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

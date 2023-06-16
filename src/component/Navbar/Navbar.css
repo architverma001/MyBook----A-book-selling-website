@@ -80,7 +80,7 @@
 }
 
 .colorbg{
-    background-color: rgb(244, 242, 251) !important;
+    background-color: rgb(255, 255, 255) !important;
 }
 
 
@@ -88,6 +88,12 @@
     color: rgb(230, 75, 109) !important;
     background-color: rgb(228, 221, 221);
     border-radius: 8px !important;
+}
+
+.colorbg li a{
+color: rgb(22, 22, 22);
+margin: 3px;
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .newi{
     margin-right: 12px;
@@ -142,4 +148,20 @@
 
 
 
+@media screen and (max-width:450px){
+
+
+ .custom{
+  scale: 90% !important;
+ }
+}
+
+@media screen and (max-width:350px){
+
+ 
+  .custom{
+   scale: 80% !important;
+  }
+ }
+ 
 

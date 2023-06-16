@@ -7,11 +7,12 @@ top: 100px;
 }
 
 body{
-  background-color: rgb(47, 225, 245);
+  background-color: rgb(240, 245, 251);
   padding: 0px;
   margin: 0px;
   height: 100%;
 }
+
 
 
 .manager{
@@ -57,6 +58,7 @@ body{
  
 }
 
+
 .formWrapper>form>button{
   border-radius: 12px;
   background-color:rgb(24, 135, 254) !important;
@@ -79,3 +81,19 @@ body{
   color: aliceblue;
   font-weight: 500;
 }
+
+
+.hhh{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: aliceblue!important;
+  padding: 6px;
+  margin: 6px;
+  width: 80vw;
+  max-width: 650px;
+  border-radius: 12px;
+ padding: 12px;
+}
+
+

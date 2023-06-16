@@ -126,6 +126,7 @@ function Search(props) {
           offer = {book.offer}
           pdf = {book.pdfUrl}
           driveURL = {book.driveURL}
+          teacherName = {book.teacherName}
           />
         ))}
     

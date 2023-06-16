@@ -1,9 +1,9 @@
-.width{
+.widthxy{
     width: 50vw;
     height: 50vw;
     max-width: 300px;
     max-height: 300px;
-   margin: 5px;
+  
 }
 
 .desc{
@@ -20,6 +20,7 @@
 .d-flexible{
     background-color: aliceblue;
     display: flex;
+    flex-direction: column;
     justify-content: center !important;
     max-width: 900px;
 

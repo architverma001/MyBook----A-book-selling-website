@@ -16,6 +16,9 @@ import Footer from './RemainingPage/Footer';
 import Privacy from './RemainingPage/Privacy';
 import Refund from './RemainingPage/Refund';
 import Terms from './RemainingPage/Terms';
+import Offline from './pages/Offline/Offline';
+import Cod from './payments/Cod/Cod';
+
 
 function App() {
 
@@ -80,8 +83,9 @@ function App() {
          <Route path='/cmsfoundationfastrack/test' element={<Search  searchStr="cmsfoundationfastracktest"/>}/>
          <Route path='/cmsintermediateregular/test' element={<Search  searchStr="cmsintermediateregulartest"/>}/>
          <Route path='/cmsintermediatefastrack/test' element={<Search  searchStr="cmsintermediatefastracktest"/>}/>
-      
 
+         <Route path = '/cod' element = {<Cod/>}  />   
+ 
          <Route path='/details' element={<Details/>}/>
          <Route path='/cart' element={<Cart/>}/>
          <Route path='/about' element={<AboutUs/>}/>
@@ -90,7 +94,8 @@ function App() {
          <Route path='/privacypolicy' element={<Privacy/>}/>
          <Route path='/refundpolicy' element={<Refund/>}/>
          <Route path='/termsandcond' element={<Terms/>}/>
-
+         
+         <Route path='/offline' element={<Offline/>}/>
 
          <Route path='/*' element={<SearchWrapper />} />
         </Routes>

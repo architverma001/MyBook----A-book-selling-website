@@ -10,6 +10,7 @@ const Details = () => {
    
     const location = useLocation();
     const book = location.state.book;
+    console.log(book);
     const { currentUser } = useContext(AuthContext);
     const Id = currentUser.uid;
     const [success,setSuccess] = useState(false);
@@ -20,7 +21,9 @@ const Details = () => {
   
     setSuccess(true);
   };
-
+  const handlePaymentSuccesss =  () => {
+    navigate('/cod',{ state: { details: book } });
+   }
   useEffect(() => {
     const handlePaymentSuccess = async () => {
       var currentDate = new Date();
@@ -42,6 +45,8 @@ const Details = () => {
         })
       ]);
   
+  
+
       console.log('Payment successful');
       const link = document.createElement('a');
       link.href = book.driveURL; //
@@ -59,7 +64,7 @@ const Details = () => {
   return (
     <div className='centrify'>
   <div className='d-flexible p-2 m-2 rounded mt-2 my-border '>
-<img src={book.img} className='width cover rounded'/>
+<img src={book.img} className='widthxy cover rounded'/>
 <div className='d-flex flex-column mrg '>
 <p className='desc'>
   {book.desc}
@@ -73,6 +78,7 @@ const Details = () => {
   </div>
   <div className=' d-flex justify-content-center'>
  <Gpay offer={book.offer} onSuccess={handlePaymentSuccess} />
+ <button offer={book.offer} onClick={handlePaymentSuccesss} className='btn bg-body-primary btn-outline-primary' >Get pendrive</button>
  </div>
 </div>
 

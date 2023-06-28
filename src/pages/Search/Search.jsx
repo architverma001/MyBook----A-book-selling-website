@@ -22,9 +22,9 @@ function Search(props) {
   
   useEffect(() => {
     if (currentUser === null) {
-      navigate('/login');
+      // navigate('/login');
     } else {
-      console.log(currentUser.uid);
+      // console.log(currentUser.uid);
     }
   }, [currentUser, navigate]);
 
@@ -39,6 +39,7 @@ function Search(props) {
     const fetchBooks = async () => {
       setLoading(true);
       try {
+
         const querys = query(collection(db, props.searchStr), limit(20));
         const querySnapshot = await getDocs(querys);
         const booksData = querySnapshot.docs.map((doc) => doc.data());
@@ -106,6 +107,7 @@ function Search(props) {
 
     if (currentPage > 1) {
       fetchMoreBooks();
+     
     }
   }, [currentPage, props.searchStr]);
 
@@ -121,7 +123,7 @@ function Search(props) {
           <Book
           key={book.desc + book.Id + book.teacherName + book.imgUrl + book.mrp + book.offer} 
          img = {book.imgUrl}
-          desc = {book.teacherbookDescription}
+        desc = {book.teacherbookDescription}
           mrp = {book.price}
           offer = {book.offer}
           pdf = {book.pdfUrl}

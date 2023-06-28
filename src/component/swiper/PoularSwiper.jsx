@@ -43,7 +43,7 @@ function PoularSwiper() {
         const fetchBooks = async () => {
             setLoading(true);
             try {
-              const querys = query(collection(db, "foundationaccounting"), limit(20));
+              const querys = query(collection(db, "popularproducts"), limit(20));
               const querySnapshot = await getDocs(querys);
               const booksData = querySnapshot.docs.map((doc) => doc.data());
               setBooks(booksData);
@@ -56,6 +56,8 @@ function PoularSwiper() {
             fetchBooks();
         }, []);
 
+
+        
       
         return (
             <Swiper
@@ -73,7 +75,7 @@ function PoularSwiper() {
           mrp = {book.price}
           offer = {book.offer}
           pdf = {book.pdfUrl}
-          
+          teacherName = {book.teacherName}
           />
                 </SwiperSlide>
               ))}

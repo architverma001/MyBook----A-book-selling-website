@@ -18,10 +18,21 @@ import Refund from './RemainingPage/Refund';
 import Terms from './RemainingPage/Terms';
 import Offline from './pages/Offline/Offline';
 import Cod from './payments/Cod/Cod';
+import TopNav from './component/Navbar/TopNav';
+import MAinCart from './component/cart/MAinCart';
+import { useEffect, useState } from 'react';
+import Profile from './RemainingPage/Profile';
 
 
 function App() {
 
+  const [showFooter, setShowFooter] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const isLoginOrRegister = location.pathname === '/login' || location.pathname === '/register';
+    setShowFooter(!isLoginOrRegister);
+  }, [location]);
 
   function SearchWrapper() {
     const location = useLocation();
@@ -31,18 +42,18 @@ function App() {
   }
 
 
-
-  const isLoginOrRegister =
-  window.location.pathname === '/login' ||
-  window.location.pathname === '/register';
+ 
+    
   return (
     <div className="App">
-      <BrowserRouter>
+      
       <div className='manager'>
+        <TopNav/>
       <Navbar />
         <Routes>
          <Route path='/' element={<Home/>}/>
-         <Route path='/login' element={<Login/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
 
          <Route path='/cafoundationregular' element={<Search  searchStr="cafoundationregular" />}/>
          <Route path='/cafoundationfastrack' element={<Search  searchStr="cafoundationfastrack"/>}/>
@@ -87,6 +98,8 @@ function App() {
  
          <Route path='/details' element={<Details/>}/>
          <Route path='/cart' element={<Cart/>}/>
+         <Route path='/cartM' element={<MAinCart/>}/>
+         <Route path='/profile' element={<Profile/>}/>
          <Route path='/about' element={<AboutUs/>}/>
 
 
@@ -99,8 +112,8 @@ function App() {
          <Route path='/*' element={<SearchWrapper />} />
         </Routes>
         </div>
-        {!isLoginOrRegister && <Footer />}
-      </BrowserRouter>
+        {showFooter && <Footer />}
+     
     </div>
   );
 }

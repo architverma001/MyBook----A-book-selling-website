@@ -1,6 +1,7 @@
 .img{
-    max-width: 99vw;
+    max-width: 95vw;
     max-height: 70vh;
+    margin: auto;
 
 }
 
@@ -25,28 +26,29 @@
 }
 
 .back-quotes{
-    background-color: rgb(2, 22, 107);
-    color: aliceblue;
-    width: 140px;
-    height: 60px;
+    color: rgb(2, 22, 107);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 80px;
     border-radius: 12px;
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     margin: auto;
     align-items: center;
     text-align: center;
-    
 }
 
 
 .newclass{
-    background-color: rgb(2, 22, 107);
-    color: aliceblue;
-    width: 250px;
+    color: rgb(2, 22, 107);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 60px;
     border-radius: 12px;
-    font-size: 1.8rem;
+
     display: flex;
     justify-content: center;
     margin: auto;
@@ -94,19 +96,23 @@
 }
 
 
+
+
 .alignitemtext{
     text-align: left;
-    max-width: 90vw;
+    max-width: 95vw;
     margin: auto;
     padding: 12px;
     font-size: 1.05rem;
-    background-color: rgb(162, 245, 231);
-    border-radius: 12px;
-    color: rgb(95, 92, 97);
+    background-color: rgb(20, 4, 186);
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
 }
 
+
+
 .students>img{
-    width: 90vw;
+    width: 95vw;
     height: auto;
     object-fit: cover;
     margin: 12px;

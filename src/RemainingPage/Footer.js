@@ -37,7 +37,7 @@ const Footer = () => {
     <div className='d-flex me-3'>
      <img  src={TeleLogo} className='w-18'/>
      <div>
-     <a href='https://t.me/lecturebasket' className='cnt-text nolink'>Contact on Telegram</a>
+     <Link to="https://t.me/lecturebasket" className='cnt-text nolink'>Contact on Telegram</Link>
       </div>
       </div>
 
@@ -62,7 +62,7 @@ const Footer = () => {
       </div>
       </div>
      
-      <div className='d-flex mb-1 p-2 '>
+      <div className='d-flex mb p-2 '>
      
      <div>
      <Link to='/refundpolicy' className='cnt-text nolink mb-3'>Refund policy</Link>
@@ -77,6 +77,13 @@ const Footer = () => {
       </div>
       </div>
 
+
+      <div className='d-flex mb p-2'>
+
+<div>
+<Link to='/about' className='cnt-text nolink'>About us</Link>
+ </div>
+ </div>
     
       </div>
 

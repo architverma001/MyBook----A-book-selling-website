@@ -62,6 +62,7 @@ function Home() {
     const textareaValue = textareaRef.current.value;
     if (textareaValue === '') {
       alert('Please enter a review');
+      isButtonDisabled(false);
       return;
     }
     console.log(textareaValue);
@@ -87,12 +88,9 @@ function Home() {
   const [swapPosition, setSwapPosition] = useState(false);
 
   useEffect(() => {
-    if (currentUser === null) {
-      navigate('/login');
-    } else {
-      console.log(currentUser.uid);
-    }
-
+    // if (currentUser === null) {
+    //   navigate('/login');
+    // }
     const interval = setInterval(() => {
       setSwapPosition((prevPosition) => !prevPosition);
     }, 4500);
@@ -103,8 +101,7 @@ function Home() {
   return (
     <div className='main'>
       <div className='mt-2 centrify'>
-        <h2 className='text-primary'>Welcome to the Lecturesbasket</h2>
-        <p className='text-secondary'>Get all the CA Books in form of pdf here at cheap price</p>
+      
       </div>
       <div className='d-flex flex-wrap justify-content-center align-items-center margtin-manager-main managercnt'>
   <ImgSwiper/>
@@ -123,9 +120,7 @@ function Home() {
         <div className='mt-4'>
       <SwipersTool/>
       </div>
-   
-
-  
+      </div>
 
 
       <div className='d-flex justify-content-lg-start flex-column alignitemtext'>
@@ -143,17 +138,15 @@ function Home() {
 As we are providing multiple courses and recorded classes from highly qualified, experienced and already successful Teachers, who guarantees your success. Your sure achievement will be celebrated with us as Lecturebasket cares for your potential and hardwork. And as a perk you need only one time investment and everything required study material will be in your hand for lifetime and at minimal expense.</p>
       </div>
 
-      <div className='students'>
-      <img src={Student} alt="" className='img contain rounded' />
+      <div className='students d-flex justify-content-center'>
+      <img src={Student} alt="" className='img contain' />
      </div>
 
 
-      <div className='d-flex justify-content-center flex-column align-text'>
-        <div className='mt-4'>
-        <div className='back-quotes reviews'>Reviews</div>
-        <Reviews/>
-        </div>
-      </div>
+
+
+
+ 
 
 
 
@@ -165,6 +158,16 @@ As we are providing multiple courses and recorded classes from highly qualified,
         </div>
         </div>
       </div>
+     
+
+
+      <div className='d-flex justify-content-center flex-column align-text'>
+      <div className='mt-4'>
+        <div className='reviews newclass'>Reviews</div>
+        <div className='mt-4'>
+        <Reviews/>
+        </div>
+        </div>
       </div>
 
       

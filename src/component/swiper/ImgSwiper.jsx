@@ -40,11 +40,11 @@ const ImgSwiper = () => {
   >
 
    <SwiperSlide>
-        <img src={Basket} alt="basket" className="imgmanager" />
+        <img src={Basket} alt="basket" className="imgmanager mb-4" />
     </SwiperSlide> 
 
     <SwiperSlide>
-        <img src={Banner} alt="banner"  className="imgmanager"/>
+        <img src={Banner} alt="banner"  className="imgmanager mb-4"/>
     </SwiperSlide>
 
 

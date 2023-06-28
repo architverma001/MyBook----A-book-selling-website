@@ -8,15 +8,28 @@ import { app, storage, db } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
 const Details = () => {
    
+
     const location = useLocation();
     const book = location.state.book;
-    console.log(book);
+    console.log(book)
     const { currentUser } = useContext(AuthContext);
-    const Id = currentUser.uid;
-    const [success,setSuccess] = useState(false);
-
     const navigate = useNavigate();
-   
+    const Id = currentUser.uid;
+    const id = Id + 'cart'
+    const [success,setSuccess] = useState(false);
+    const [disable,setDisable] = useState(false);
+    const handleAddTocart = async () => { 
+      setDisable(true)
+      const NameId = book.desc + book.teacherName
+      await Promise.all([
+        setDoc(doc(db, id,NameId), {
+          book
+        })
+      ]);
+      setDisable(false)
+      navigate('/cartM');
+    }
+     
   const handlePaymentSuccess = () => {
   
     setSuccess(true);
@@ -41,16 +54,12 @@ const Details = () => {
           bookName: book.desc,
           bookImg: book.img,
           Id:NameId,
-          driveURL:book.driveURL,
+          driveURL:book.pdf,
         })
       ]);
-  
-  
-
-      console.log('Payment successful');
+        console.log('Payment successful');
       const link = document.createElement('a');
-      link.href = book.driveURL; //
-       console.log(book.driveURL);
+      link.href = book.pdf; //
       link.target = '_blank'; // Open in a new tab or window
 
       link.dispatchEvent(new MouseEvent('click'));
@@ -69,6 +78,9 @@ const Details = () => {
 <p className='desc'>
   {book.desc}
 </p>
+<p className='desc'>
+  {book.teacherName}
+</p>
 <div className='height'>
 
 </div>
@@ -81,6 +93,9 @@ const Details = () => {
  <button offer={book.offer} onClick={handlePaymentSuccesss} className='btn bg-body-primary btn-outline-primary' >Get pendrive</button>
  </div>
 </div>
+<p className='text-align-center'>OR</p>
+<button className='btn btn-outline-primary' onClick={handleAddTocart}>Add to cart</button>
+{disable && <p className='text-align-center'>Adding to cart...</p>}
 
   </div>
   </div>

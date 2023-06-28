@@ -12,7 +12,7 @@ const Cart = () => {
   const [booksPerPage] = useState(6); // Set the number of books to display per page
   const { currentUser } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  var current = '';
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -22,27 +22,32 @@ const Cart = () => {
           const querySnapshot = await getDocs(querys);
           const booksData = querySnapshot.docs.map((doc) => doc.data());
           setBooks(booksData);
-          console.log(booksData);
+          current = user.uid;
         };
   
         fetchBooks();
+      }
+      else{
+        alert("Please login to continue");
+        navigate('/login');
+        return;
       }
     });
   
     return () => {
       unsubscribe();
     };
-  }, [navigate]);
+  }, [navigate,current]);
 
 
   return (
-    <div className='d-flex flex-row flex-wrap justify-content-between p-2'>
+    <div className='d-flex flex-row flex-wrap justify-content-center p-2'>
       {books.map((book) => (
        
         <BookCopy key={book.Id} img={book.bookImg}  desc = {book.bookName} pdf = {book.bookUrl}
         driveURL = {book.driveURL}
         /> ))}
-       
+       {books.length === 0 && <h3>Your books is empty</h3>}
     </div>
   )
 }

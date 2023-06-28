@@ -1,38 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import "./Login.css"; // Import the CSS file for Login component
 
 const Login = () => {
+  const [err, setErr] = useState(false);
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target[0].value;
+    const password = e.target[1].value;
 
     try {
-      await signInWithPopup(auth, provider);
-      navigate("/");
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/")
     } catch (err) {
-      alert(err.message);
+      setErr(true);
     }
   };
-
   return (
-    <div className="formContainer m-2">
+    <div className="formContainer">
       <div className="formWrapper">
-        <div>
-          <h1 className="logo">Lectureb@sket</h1>
-          <h2 className="title">Sign in</h2>
-        </div>
-
-        <button className="googleButton mb-4" onClick={handleGoogleSignIn}>
-          Sign in with Google
-        </button>
-
-        <p className="navigate">
-          Know about our platform? <Link to="/about">About us</Link>
-        </p>
+      
+        <form onSubmit={handleSubmit}>
+        <span className="logo">Lecturesbasket</span>
+        <span className="title">Login</span>
+          <input type="email" placeholder="email" />
+          <input type="password" placeholder="password" />
+          <button>Sign in</button>
+          {err && <span>Something went wrong</span>}
+          <p className="navigate">You don't have an account? <Link to="/register">Register</Link></p>
+        </form>
+  
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ function Offline() {
     const [selectedCity, setSelectedCity] = useState('');
     const [cities, setCities] = useState([]);
     const [states, setStates] = useState([]);
-    const [address, setAddress] = useState('');
+    const [address, setAddress] = useState([]);
     const [loading, setLoading] = useState(false);
     const[load,setload] = useState(false);
    
@@ -108,8 +108,8 @@ function Offline() {
       </select>
       </div>
 
-      <div className='d-flex justify-content-center text-align-center'>
-      <p className='me-1 mt-1 ms-1'>Cities</p>
+      <div className='d-flex justify-content-center text-align-center mb-1'>
+      <p className='me-1 mt-1 ms-1 mb-1'>Cities</p>
       <select value={selectedCity} onChange={(e) => handleCityChange(e.target.value)}>
         <option value="" className='maxwdt'>Select a city</option>
         {cities.map((city, index) => (
@@ -121,7 +121,7 @@ function Offline() {
       </div>
       </div>
       <div className='centrify'>
-        <button className='btn mt-2 bg width ms-1'  onClick={handleSubmit}  >submit</button>
+        <button className='btn mt-2 bg width ms-5'  onClick={handleSubmit}  >submit</button>
         </div>
         </div>
    

@@ -1,0 +1,12 @@
+.bckg{
+    background-color: #0c0099;
+    padding-right: 8px;
+}
+
+.h-18{
+    height: 30px;
+}
+
+.h-18:hover{
+    cursor: pointer;
+}

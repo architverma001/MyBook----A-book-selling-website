@@ -17,9 +17,9 @@ function Reviews() {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      if (windowWidth < 600) {
+      if (windowWidth < 900) {
         setSlidesPerView(1);
-      } else if (windowWidth < 1200) {
+      } else if (windowWidth < 1400) {
         setSlidesPerView(2);
       } else {
         setSlidesPerView(3);
@@ -48,27 +48,21 @@ function Reviews() {
 
   SwiperCore.use([Pagination, Autoplay]); // Use the required modules
 
+
+
   return (
-    <div className="portfolio" id="portfolio">
+    <div  id="portfolio">
 <Swiper
   ref={swiperRef}
-  spaceBetween={30}
-  slidesPerView={slidesPerView}
-  grabCursor={true}
-  className="portfolio-slider"
-  modules={[Pagination, Autoplay]}
-  observeSlideChildren={true}
-  pagination={{ clickable: true }}
-  autoplay={{
-    delay: 3000, // Set the delay between slides in milliseconds
-    disableOnInteraction: false, // Continue auto sliding even when user interacts with the slider
-  }}
-  observe="true"
+   spaceBetween={20}
+              slidesPerView={slidesPerView}
+              pagination={{ clickable: true }}
+              autoplay={{ delay: 3000 }}
 >
         {reviews &&
           reviews.map((review) => (
-            <SwiperSlide key={review.ID} className="mb-4 mt-4">
-              <ReviewCont content={review.textareaValue} className ='p-3' />
+            <SwiperSlide key={review.ID} className="mb-4">
+                           <ReviewCont className = 'font-formt' content={review.textareaValue}  />
             </SwiperSlide>
           ))}
       </Swiper>

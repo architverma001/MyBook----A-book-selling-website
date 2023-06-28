@@ -11,9 +11,9 @@ function SwipersTool() {
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
-      if (windowWidth < 600) {
+      if (windowWidth < 900) {
         setSlidesPerView(1);
-      } else if (windowWidth < 1200) {
+      } else if (windowWidth < 1400) {
         setSlidesPerView(2);
       } else {
         setSlidesPerView(3);

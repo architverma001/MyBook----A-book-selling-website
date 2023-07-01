@@ -9,6 +9,7 @@ function Profile() {
   const [profile, setProfile] = useState({});
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
 
@@ -38,6 +39,7 @@ function Profile() {
   const handleEditClick = () => {
     setEditMode(true);
     setName(profile.name);
+    setEmail(profile.email);
     setAddress(profile.address);
     setPhone(profile.phone);
   };
@@ -47,12 +49,14 @@ function Profile() {
       const profileRef = doc(db, 'profile', profile.id);
       await updateDoc(profileRef, {
         name,
+        email,
         address,
         phone
       });
       setProfile({
         ...profile,
         name,
+        email,
         address,
         phone
       });
@@ -63,47 +67,50 @@ function Profile() {
   };
 
   return (
-    <div className='d-flex flex-column p-2 justify-content-center ' >
-         <h2 className='text-align-center mt-3 mb-3'>Profile details</h2>
-    <div className='d-flex flex-wrap p-2 justify-content-center'>
-   
-      <img src={profile.profilePic || {profilex}} alt="Avatar" className="avatar" />
-      <div className='d-flex flex-column p-2'>
-        <div className='me-5 p-1 mt-3'><strong className='p-2  me-1'>Name:</strong>
+    <div className='d-flex flex-column p-2 justify-content-center'>
+      <h2 className='text-align-center mt-3 mb-3'>Profile details</h2>
+      <div className='d-flex flex-wrap p-2 justify-content-center'>
+        <img src={profile.profilePic || profilex} alt="Avatar" className="avatar" />
+        <div className='d-flex flex-column p-2'>
+          <div className='me-5 p-1 mt-3'>
+            <strong className='p-2  me-1'>Name:</strong>
+            {editMode ? (
+              <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            ) : (
+              profile.name
+            )}
+          </div>
+          <div className='me-5 p-1'>
+            <strong className='p-2 me-1'>Email:</strong>
+            {editMode ? (
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            ) : (
+              profile.email
+            )}
+          </div>
+          <div className='me-5 p-1'>
+            <strong className='p-2 me-1'>Phone:</strong>
+            {editMode ? (
+              <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
+            ) : (
+              profile.phone
+            )}
+          </div>
+          <div className='me-5 p-1'>
+            <strong className='p-2 me-1'>Address:</strong>
+            {editMode ? (
+              <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+            ) : (
+              profile.address
+            )}
+          </div>
           {editMode ? (
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <button className="btn btn-primary mt-2" onClick={handleSaveClick}>Save</button>
           ) : (
-            profile.name
+            <button className="btn btn-primary" onClick={handleEditClick}>Edit Details</button>
           )}
         </div>
-        <div className='me-5 p-1'>
-          <strong className='p-2 me-1 '>Email:</strong>
-          {profile.email}
-        </div>
-        <div className='me-5 p-1'>
-          <strong className='p-2 me-1 '>Phone:</strong>
-          {editMode ? (
-            <input type="text" value={phone} onChange={(e) => setPhone(e.target.value)} />
-          ) : (
-            profile.phone
-          )}
-        </div>
-        <div className='me-5 p-1'>
-          <strong className='p-2 me-1 '>Address:</strong>
-          {editMode ? (
-            <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
-          ) : (
-            profile.address
-          )}
-        </div>
-        {editMode ? (
-          <button className="btn btn-primary mt-2" onClick={handleSaveClick}>Save</button>
-        ) : (
-          <button className="btn btn-primary" onClick={handleEditClick}>Edit Details</button>
-        )}
-     
-     </div>
-    </div>
+      </div>
     </div>
   );
 }

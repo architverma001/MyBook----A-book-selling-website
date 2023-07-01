@@ -3,6 +3,7 @@ import './Profile.css';
 import { collection, query, where, getDocs, updateDoc, doc } from "firebase/firestore";
 import { db, auth } from '../firebase';
 import { AuthContext } from '../context/AuthContext';
+import profilex from '../img/profile.png';
 
 function Profile() {
   const [profile, setProfile] = useState({});
@@ -66,7 +67,7 @@ function Profile() {
          <h2 className='text-align-center mt-3 mb-3'>Profile details</h2>
     <div className='d-flex flex-wrap p-2 justify-content-center'>
    
-      <img src={profile.profilePic || "https://www.w3schools.com/howto/img_avatar.png"} alt="Avatar" className="avatar" />
+      <img src={profile.profilePic || {profilex}} alt="Avatar" className="avatar" />
       <div className='d-flex flex-column p-2'>
         <div className='me-5 p-1 mt-3'><strong className='p-2  me-1'>Name:</strong>
           {editMode ? (

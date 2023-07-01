@@ -125,6 +125,7 @@ function Search(props) {
          img = {book.imgUrl}
         desc = {book.teacherbookDescription}
           mrp = {book.price}
+          name = {book.desc}
           offer = {book.offer}
           pdf = {book.pdfUrl}
           driveURL = {book.driveURL}

@@ -1,18 +1,16 @@
 .imgmanager{
-    width: 90vw;
-    max-width: 1000px;
+    width: 98vw;
     max-height: 80vh;
-    object-fit: contain;
+  
 
 }   
 
 
 @media screen and (max-width: 600px) {
     .imgmanager{
-        width: 90vw;
-        max-width: 800px;
+        width: 99vw;
         max-height: 280px;
-        object-fit: contain;
+     
     
     } 
 }

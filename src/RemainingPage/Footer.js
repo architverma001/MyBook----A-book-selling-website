@@ -23,9 +23,9 @@ const Footer = () => {
       <div className='d-flex'>
      <img  src={Call} className='w-18'/>
      <div>
-      <p className='cnt-text'> 9520257467</p>
-      <p className='cnt-text'> 9998740148</p>
-      <p className='cnt-text'>9313651038</p>
+      <p> 9520257467</p>
+      <p> 9998740148</p>
+      <p>9313651038</p>
       </div>
       </div>
 
@@ -65,7 +65,7 @@ const Footer = () => {
       <div className='d-flex mb p-2 '>
      
      <div>
-     <Link to='/refundpolicy' className='cnt-text nolink mb-3'>Refund policy</Link>
+     <Link to='/refundpolicy' className='cnt-text nolink mb-3'>Refund & shipping policy</Link>
       </div>
       </div>
 

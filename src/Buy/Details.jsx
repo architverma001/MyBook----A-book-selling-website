@@ -55,6 +55,7 @@ const Details = () => {
           bookImg: book.img,
           Id:NameId,
           driveURL:book.pdf,
+          teacherName:book.name
         })
       ]);
         console.log('Payment successful');
@@ -75,11 +76,14 @@ const Details = () => {
   <div className='d-flexible p-2 m-2 rounded mt-2 my-border '>
 <img src={book.img} className='widthxy cover rounded'/>
 <div className='d-flex flex-column mrg '>
-<p className='desc'>
+  <h4>
+    {book.name}
+  </h4>
+<p className='desc fw-light fs-6'>
   {book.desc}
 </p>
-<p className='desc'>
-  {book.teacherName}
+<p className='desc fw-light fs-5'>
+  By {book.teacherName}
 </p>
 <div className='height'>
 

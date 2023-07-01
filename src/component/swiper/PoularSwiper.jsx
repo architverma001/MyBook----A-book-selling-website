@@ -47,6 +47,7 @@ function PoularSwiper() {
               const querySnapshot = await getDocs(querys);
               const booksData = querySnapshot.docs.map((doc) => doc.data());
               setBooks(booksData);
+              console.log(booksData);
             }
             catch (error) {
                 console.log('An error occurred while fetching books:', error);
@@ -71,6 +72,7 @@ function PoularSwiper() {
                   <Book
           key={book.desc + book.Id + book.teacherName + book.imgUrl + book.mrp + book.offer} 
          img = {book.imgUrl}
+         name= {book.desc}
           desc = {book.teacherbookDescription}
           mrp = {book.price}
           offer = {book.offer}

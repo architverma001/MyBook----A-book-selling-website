@@ -69,7 +69,22 @@ LecturesBasket reserves the right to cancel any orders that classify as a 'Bulk 
 
 
 </ul>
+<h4 className='mb-2 mt-1'>
+Shipping Policy 
+</h4>
+<h4>
+ESTIMATED SHIPPING TIME
+</h4>
+<p>Shipping will be initiated after the paymeny confirmation. Once your order is confirmed, shipping will be initiated.
+</p>
+<h4>
+ESTIMATED DELIVERY TIME
+</h4>
+<p>Generally it takes 5 - 6 days for a normal delivery.  Once your order has been confirmed and payment is authorized, your order will be in processing mode. You will receive an e-mail regarding the details of your order with order-id.</p>
     </div>
+
+
+
   )
 }
 

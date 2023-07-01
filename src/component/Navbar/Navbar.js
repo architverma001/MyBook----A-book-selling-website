@@ -6,6 +6,7 @@ import { Country, State, City }  from 'country-state-city';
 import logo from '../../img/logoLectures.png'
 import { AuthContext } from '../../context/AuthContext';
 function Navbar() {
+  
   const navigate = useNavigate()
 const handleit = () => {  
   navigate('/')
@@ -409,7 +410,14 @@ const searchInputRef = useRef(null);
 
     
 
-
+      <div className='d-flex justify-content-end'>
+<div>
+<form className="disply" role="search">
+        <input ref={searchInputRef}  className="form-control" type="search" placeholder="book/teacher/all" aria-label="Search"/>
+        <button className="btn ms-3 btn-sm btn-outline-success" onClick={handlesub}>Search</button>
+      </form>
+</div>
+</div>
 
     
     

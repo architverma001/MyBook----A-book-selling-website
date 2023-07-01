@@ -27,8 +27,6 @@ const MainCart = () => {
           const querySnapshot = await getDocs(querys);
           const booksData = querySnapshot.docs.map((doc) => doc.data());
           setBooks(booksData);
-
-          console.log(user.uid);
         };
 
         fetchBooks();
@@ -67,6 +65,7 @@ const MainCart = () => {
                 bookUrl: book.book.pdf,
                 bookName: book.book.desc,
                 bookImg: book.book.img,
+                bookdesc: book.book.name,
                 Id: nameId,
                 driveURL: book.book.pdf,
               })
@@ -96,6 +95,7 @@ const MainCart = () => {
               pdf={book.book.pdf}
               driveURL={book.book.pdf}
               teacherName={book.book.teacherName}
+              name={book.book.name}
             />
           );
         })}

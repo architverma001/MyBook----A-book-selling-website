@@ -37,16 +37,6 @@ function Home() {
   
   const formRef = useRef(null);
 
-  const handlesub = (e)=>{
-    e.preventDefault();
-    const searchValue = searchInputRef.current.value;
-    const Str = searchValue.toLowerCase();
-    navigate(`/${Str}`);
-} 
-
-
-  const searchInputRef = useRef(null);
-
 
   const handlebtnz = async (e) => {
     e.preventDefault();
@@ -100,42 +90,19 @@ function Home() {
 
   return (
     <div className='main'>
-      <div className='mt-2 centrify'>
+      <div className='mt-1'>
       
       </div>
-      <div className='d-flex flex-wrap justify-content-center align-items-center margtin-manager-main managercnt'>
+      <div className='d-flex'>
   <ImgSwiper/>
 </div>
 
-<div className='d-flex justify-content-center'>
-<div className='handle-width'>
-<form className="disply" role="search">
-        <input ref={searchInputRef}  className="form-control me-2" type="search" placeholder="book/teacher/all" aria-label="Search"/>
-        <button className="btn btn-sm btn-outline-success" onClick={handlesub}>Search</button>
-      </form>
-</div>
-</div>
+
       <div className='d-flex justify-content-center flex-column align-text'>
         <div className='back-quotes'>Quotes</div>
         <div className='mt-4'>
       <SwipersTool/>
       </div>
-      </div>
-
-
-      <div className='d-flex justify-content-lg-start flex-column alignitemtext'>
-        <h5>Home</h5>
-        <h5>LectureBasket</h5>
-        <p>Are you dreaming of cracking CA , CS  or CMA ? </p> 
-        <p>If yes, then you are at the correct place because Lecturebasket is an open forum giving an ultimate solution for all your needs. </p>
-<p>CA is a globally recognized accounting qualification. It equips individuals with expertise in accounting, auditing, taxation, and financial management, opening doors to diverse career opportunities in various industries.</p>
-
-<p>The CS (Company Secretary) course is a professional program focused on corporate governance, compliance, and company law. It equips individuals with skills to handle legal and regulatory aspects of businesses, ensuring effective corporate administration and management.</p>
-
-<p>The CMA (Certified Management Accountant) course is a professional program that emphasizes management accounting, financial planning, analysis, and strategic decision-making. It equips individuals with skills for financial management roles, supporting organizational success and profitability.</p>
-
-<p>You dream may come true! All these above mentioned can be YOU ! All you need is a little push and Lecturebasket comes at your aid. 
-As we are providing multiple courses and recorded classes from highly qualified, experienced and already successful Teachers, who guarantees your success. Your sure achievement will be celebrated with us as Lecturebasket cares for your potential and hardwork. And as a perk you need only one time investment and everything required study material will be in your hand for lifetime and at minimal expense.</p>
       </div>
 
       <div className='students d-flex justify-content-center'>
@@ -152,7 +119,7 @@ As we are providing multiple courses and recorded classes from highly qualified,
 
       <div className='d-flex justify-content-center flex-column align-text'>
         <div className='mt-4'>
-        <div className='reviews newclass'>Poular Products</div>
+        <div className='reviews newclass'>Popular Products</div>
         <div className='mt-4'>
         <PoularSwiper/>
         </div>

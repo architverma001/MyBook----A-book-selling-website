@@ -9,37 +9,34 @@ function Privacy() {
 By submitting your personal information and details  in our website you are accepting our policy with full consent and are aware of your action and disclosure of your information will be based on our policies. 
 </p>
 <h4>
-User Information
+USER CONSENT
 </h4>
 <p>
-For convenient use of our service users may need to provide some information specifying their names, course they are seeking for, address , contact number, email address and a profile photo. 
+By submitting Personal Data through our Website, Application or Offerings, you agree to the terms of this Privacy Policy and you expressly consent to the collection, use and disclosure of your Personal Data in accordance with this Privacy Policy. We collect Personal Data "Personal Data" means data that allows someone to identify or contact you, including, for example, your name, address, telephone number, e-mail address.
 </p>
+
+<h4>
+GOOGLE ANALYTICS
+</h4>
 <p>
-The information shared by the users will help our platform to produce best results and we focus on improving our quality. The above mentioned information will not be considered sensitive and our products are accessible by the public domain and is bounded under Right to Information Act 2005 or any other act significant to this context. 
+We use Google Analytics to help analyze how users use the Website. Google Analytics uses Cookies to collect information such as how often users visit the Website, what pages they visit, and what other sites they used prior to coming to the Website. We use the information we get from Google Analytics only to improve our Website and services.
+</p>
+
+<h4>
+LEGAL RIGHTS 
+</h4> 
+<p>
+We may share your personal information with government authorities in response to court orders, or other legal process; to establish or exercise our legal rights or to protect our rights and to defend against legal claims.
 </p>
 <h4>
+
+SECURITY PRECAUTIONS
+
 </h4>
-<h6>
-1. Measures Taken
-</h6> 
 <p>
-We take all the appropriate measures to protect against unauthorised access , disclosure , piracy or destruction of data. We safe guard our data, storage  including encryption through physical barriers and cyber security systems towards unauthorised penetrations to our sites where we store our personal data. 
-</p>
-<h6>
-2. Access to Information
-</h6>
-<p>
-All information accumulated on our website is saved in our controlled database. The database is stored behind a firewall, the server is password protected and allows limited access . However, no security system is impenetrable hence, we cannot guarantee the information supplied over the internet will not be obstructed in the way reaching us. And your posts in discussion area will be accessible by all the users. 
-</p>
-<h6>
-3. Legal Process
-</h6>
-<p>
-We have to share your personal information with government if your transactions algets involved in any legal procedure. We are. doing this in order to save our rights 
-</p>
 
-
-
+Our website has clinical security measures for protecting the loss, misuse and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession we adhere to strict security guidelines, protecting it against unauthorized access. Lectures Basket reserves the right to refuse service to anyone at anytime.
+</p>
 
     </div>
   )

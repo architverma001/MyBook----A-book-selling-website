@@ -13,6 +13,7 @@ function Offline() {
     const [states, setStates] = useState([]);
     const [address, setAddress] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [course, setCourse] = useState('');
     const[load,setload] = useState(false);
    
     useEffect(() => {
@@ -48,7 +49,13 @@ function Offline() {
             setLoading(false);
             return
         }
-        const StateCity = selectedState+selectedCity;
+        if(!course){
+            alert("Please select a course type")
+            setLoading(false);
+            return
+        }
+
+        const StateCity = selectedState+selectedCity+course;
         setLoading(true);
       try {
         const querys = query(collection(db, StateCity));
@@ -87,6 +94,10 @@ function Offline() {
       setSelectedCity(city);
      
     };
+
+    const handleCoursechange = (course) => {
+        setCourse(course);
+    };
   
 
     
@@ -119,6 +130,17 @@ function Offline() {
         ))}
       </select>
       </div>
+
+      <div className='d-flex justify-content-center text-align-center mb-1'>
+      <p className='me-1 mt-1 ms-1 mb-1'>Course</p>
+      <select value={course} onChange={(e) => handleCoursechange(e.target.value)}>
+        <option value="" className='maxwdt'>Select a city</option>
+        <option value="ca">CA</option>
+        <option value="cma">CMA</option>
+        <option value="cs">CS</option>
+      </select>
+      </div>
+
       </div>
       <div className='centrify'>
         <button className='btn mt-2 bg width ms-5'  onClick={handleSubmit}  >submit</button>

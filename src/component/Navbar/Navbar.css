@@ -54,6 +54,21 @@
 
 .logoManger{
   height: 60px;
+  border-radius: 4px;
+}
+
+
+.h19{
+  max-height:40px;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .logoManger{
+    display: none;
+  }
+  .h19{
+    display: block;
+  }
 }
 
 .navbar{

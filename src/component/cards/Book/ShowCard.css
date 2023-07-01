@@ -1,0 +1,51 @@
+.make-width{
+    max-width: 210px;
+    height: 210px;
+    border-radius: 8px;
+}
+.text{
+    overflow-wrap: break-word;
+    overflow-x: auto;
+    max-width: 210px;
+    
+}
+@media screen and  (max-width: 768px) {
+    .make-width{
+        max-width: 190px;
+        height: 190px;
+    }
+    .text{
+        max-width: 190px;
+     
+    }
+}
+    
+@media  screen and (max-width: 480px) {
+    .make-width{
+        max-width: 130px;
+        height: 130px;
+    }
+    .text{
+        max-width: 130px;
+       
+    }
+}
+    
+@media  screen and (max-width: 320px) {
+    .make-width{
+        max-width: 100px;
+        height: 100px;
+    }
+    .text{
+        max-width: 100px;
+     
+    }
+}
+
+
+@media screen and (max-width: 470px) {
+    .text{
+        font-size: 0.8rem;
+    }
+}
+    

@@ -13,9 +13,17 @@ import { doc, setDoc } from 'firebase/firestore';
 import { app, storage, db } from '../../firebase';
 import Reviews from '../../component/swiper/Reviews';
 import Student from '../../img/student.jpg';
+import img1 from '../../img/img1.jpg';
+import img2 from '../../img/img2.jpg';
+import img3 from '../../img/img3.jpg';
+import img4 from '../../img/img4.jpg';
+import img5 from '../../img/img5.jpg';
+import img6 from '../../img/img6.jpg';
+import ca from '../../img/ca.jpg';
 import FormCityState from '../../component/formconatiner/FormCityState';
 import ImgSwiper from '../../component/swiper/ImgSwiper';
 import PoularSwiper from '../../component/swiper/PoularSwiper';
+import ShowCard from '../../component/cards/Book/ShowCard';
 function Home() {
 
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -105,21 +113,43 @@ function Home() {
       </div>
       </div>
 
-      <div className='students d-flex justify-content-center'>
-      <img src={Student} alt="" className='img contain' />
+      <div className='students d-flex justify-content-center mb-2'>
+      <img src={ca} alt="" className='img contain' />
      </div>
 
 
 
 
+    <div className='d-flex flex-wrap justify-content-center mt-1'>
+    <ShowCard img = {img1} text="💫𝐴𝑙𝑙 𝐹𝑎𝑐𝑢𝑙𝑡𝑦'𝑠 𝐿𝑒𝑐𝑡𝑢𝑟𝑒
+"/>
+ 
+ 
+    
+    <ShowCard img = {img2} text="💫𝐹𝑎𝑠𝑡𝑒𝑠𝑡 𝐷𝑒𝑙𝑖𝑣𝑒𝑟𝑦 𝑆𝑒𝑟𝑣𝑖𝑐𝑒
+"/>
 
+
+    
+    <ShowCard img = {img3} text="💫𝐿𝑒𝑐𝑡𝑢𝑟𝑒𝑠 𝑇𝑟𝑎𝑐𝑘𝑖𝑛𝑔 𝐹𝑎𝑐𝑖𝑙𝑖𝑡𝑦
+"/>
+  
+
+    
+    <ShowCard img = {img4} text="💫𝑀𝑎𝑥𝑖𝑚𝑢𝑚 𝐷𝑖𝑠𝑐𝑜𝑢𝑛𝑡"/>
  
 
+    
+    <ShowCard img = {img5} text="💫𝐵𝑒𝑠𝑡 𝐶𝑢𝑠𝑡𝑜𝑚𝑒𝑟 𝑆𝑢𝑝𝑝𝑜𝑟𝑡"/>
+
+    
+    <ShowCard img = {img6} text="💫𝐵𝑒𝑠𝑡 𝐺𝑟𝑜𝑢𝑝𝑠 𝑡𝑜 𝑠𝑜𝑙𝑣𝑒 𝑦𝑜𝑢𝑟 𝑎𝑙𝑙 𝑑𝑜𝑢𝑏𝑡𝑠"/>
+    </div>
 
 
       <div className='d-flex justify-content-center flex-column align-text'>
         <div className='mt-4'>
-        <div className='reviews newclass'>Popular Products</div>
+        <div className='reviews newclass p-2'>Popular Products</div>
         <div className='mt-4'>
         <PoularSwiper/>
         </div>

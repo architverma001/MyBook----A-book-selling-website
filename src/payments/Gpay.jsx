@@ -63,8 +63,8 @@ function Gpay(props) {
   };
 
   return (
-    <button onClick={() => handlePrice(price)} className='btn bg-body-primary btn-outline-primary ms-1 me-2'>
-     Get Drive
+    <button onClick={() => handlePrice(price)} className='btn bg-body-danger btn-outline-danger ms-1 me-2'>
+     Pay now
     </button>
   );
 }

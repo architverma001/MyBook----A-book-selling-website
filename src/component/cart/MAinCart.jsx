@@ -82,7 +82,7 @@ const MainCart = () => {
 
   return (
     <div>
-      <div className="d-flex flex-row flex-wrap justify-content-center p-2">
+      <div className="d-flex flex-row flex-wrap justify-content-start p-2">
         {books.map((book) => {
           price = parseInt(price) + parseInt(book.book.offer);
           return (
@@ -104,7 +104,7 @@ const MainCart = () => {
       <div className="p-2 ms-4" style={{ fontSize: '18px' }}>
         <strong>Your total cost is: {price}</strong>
         <div className="d-flex justify-content-center">
-          <Gpay offer={price} onSuccess={handlePaymentSuccess} />
+         { price!==0 && <Gpay offer={price} onSuccess={handlePaymentSuccess} />}
         </div>
       </div>
     </div>

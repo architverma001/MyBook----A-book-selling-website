@@ -117,10 +117,10 @@ function Search(props) {
 
   return (
     <div>
-    <div className='d-flex flex-wrap justify-content-between p-2'>
+    <div className='d-flex flex-wrap justify-content-start p-2'>
       {books.map((book) => (
         
-          <Book
+          <Book 
           key={book.desc + book.Id + book.teacherName + book.imgUrl + book.mrp + book.offer} 
          img = {book.imgUrl}
         desc = {book.teacherbookDescription}

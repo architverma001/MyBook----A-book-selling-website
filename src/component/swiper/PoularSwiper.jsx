@@ -62,7 +62,7 @@ function PoularSwiper() {
       
         return (
             <Swiper
-              spaceBetween={30}
+              spaceBetween={20}
               slidesPerView={slidesPerView}
               pagination={{ clickable: true }}
               autoplay={{ delay: 3000 }}

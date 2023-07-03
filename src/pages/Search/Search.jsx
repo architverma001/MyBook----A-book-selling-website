@@ -116,8 +116,10 @@ function Search(props) {
 
 
   return (
+   
     <div>
-    <div className='d-flex flex-wrap justify-content-start p-2'>
+      
+    <div className='d-flex flex-wrap p-2'>
       {books.map((book) => (
         
           <Book 
@@ -143,6 +145,7 @@ function Search(props) {
       )}
     <div ref={loadMoreRef} style={{ height: '30px' }}/>
     </div>
+    
   );
 }
 

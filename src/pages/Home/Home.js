@@ -19,6 +19,7 @@ import img3 from '../../img/img3.jpg';
 import img4 from '../../img/img4.jpg';
 import img5 from '../../img/img5.jpg';
 import img6 from '../../img/img6.jpg';
+
 import ca from '../../img/ca.jpg';
 import FormCityState from '../../component/formconatiner/FormCityState';
 import ImgSwiper from '../../component/swiper/ImgSwiper';
@@ -118,7 +119,17 @@ function Home() {
      </div>
 
 
-
+<div className='p-4 m-1'>
+<h1>Welcome to our Book Haven!</h1>
+<p>Discover the joy of reading and immerse yourself in a world of endless possibilities. Our book selling website is your ultimate destination for all things literary. Whether you're a passionate bookworm, a curious explorer, or a casual reader seeking a captivating escape, we have something for everyone.</p>
+<p>Browse through our vast collection, carefully curated to cater to diverse tastes and interests. From timeless classics to the latest bestsellers, from gripping thrillers to heartwarming romance, we have an extensive range of genres to ignite your imagination. Dive into the pages of riveting novels, enlightening non-fiction, intriguing mysteries, inspiring biographies, and so much more.</p>
+<p>Finding your next literary gem is a breeze with our user-friendly interface. Explore our intuitive search and recommendation features, which are designed to help you uncover hidden literary treasures and discover new authors. Connect with fellow book lovers through lively discussions in our vibrant community forums and share your thoughts, recommendations, and personal reflections.</p>
+<p>At Book Haven, we believe that reading should be accessible to all. That's why we offer a wide selection of formats, including physical books, e-books, and audiobooks, ensuring that you can enjoy your favorite stories in a way that suits your lifestyle and preferences.</p>
+<p>Looking to find the perfect gift for a loved one? Delve into our thoughtfully curated collections and themed book sets, handpicked to bring joy to any book enthusiast's heart. You can also explore our range of book-related merchandise, from cozy reading accessories to elegant bookshelf decor, to enhance your reading experience.</p>
+<p>We pride ourselves on providing a seamless and secure shopping experience. Our dedicated customer support team is always ready to assist you with any inquiries, ensuring your satisfaction from the moment you enter our virtual store until your book arrives at your doorstep.</p>
+<p>Join us on a literary journey that will transport you to distant lands, introduce you to unforgettable characters, and ignite your imagination. Step into the enchanting realm of Book Haven and let the magic of storytelling guide you.</p>
+<p>Start exploring today and let the pages come alive!</p>
+</div>
 
     <div className='d-flex flex-wrap justify-content-center mt-1'>
     <ShowCard img = {img1} text="💫𝐴𝑙𝑙 𝐹𝑎𝑐𝑢𝑙𝑡𝑦'𝑠 𝐿𝑒𝑐𝑡𝑢𝑟𝑒

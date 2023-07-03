@@ -6,13 +6,14 @@ import {getFirestore} from 'firebase/firestore'
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCuakEojVvVd2B0cgOdnCWUu_g--QhKnDo",
-  authDomain: "lecturebasketdatabase.firebaseapp.com",
-  projectId: "lecturebasketdatabase",
-  storageBucket: "lecturebasketdatabase.appspot.com",
-  messagingSenderId: "427065908668",
-  appId: "1:427065908668:web:bb5b21145d789fbd1d9fb9",
-  measurementId: "G-FM484HBFBK"
+  apiKey: "AIzaSyDvjIt1_9wWAvYvWZgtpzz7OMOJ29GRfeQ",
+  authDomain: "my-application-88fc7.firebaseapp.com",
+  databaseURL: "https://my-application-88fc7-default-rtdb.firebaseio.com",
+  projectId: "my-application-88fc7",
+  storageBucket: "my-application-88fc7.appspot.com",
+  messagingSenderId: "755742675573",
+  appId: "1:755742675573:web:079f0dd35ff0ec9f1d9e3c",
+  measurementId: "G-MYT21MQE4Q"
 };
 
 

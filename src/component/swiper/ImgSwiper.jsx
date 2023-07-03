@@ -6,6 +6,12 @@ import "swiper/css/pagination";
 import SwiperCore, { Pagination, Autoplay } from "swiper";
 import Banner from '../../img/lecturebasket.jpg';
 import Basket from '../../img/basket.png';
+import manga from '../../img/manga.jpg';
+import manga2 from '../../img/manga2.jpg';
+import science from '../../img/scinece.jpg';
+import spaces from '../../img/student.jpg';
+import lib2 from '../../img/lib2.jpg';
+import library from '../../img/library.webp';
 import './Img.css'
 const ImgSwiper = () => {
     const [slidesPerView, setSlidesPerView] = useState(3);
@@ -40,29 +46,29 @@ const ImgSwiper = () => {
   >
 
    <SwiperSlide>
-        <img src={Basket} alt="basket" className="imgmanager mb-5" />
+        <img src={manga} alt="basket" className="imgmanager mb-5" />
     </SwiperSlide> 
 
     <SwiperSlide>
-        <img src={Banner} alt="banner"  className="imgmanager mb-4"/>
+        <img src={manga2} alt="banner"  className="imgmanager mb-4"/>
     </SwiperSlide>
 
 
     <SwiperSlide>
-        <img src={Basket} alt="basket" className="imgmanager" />
+        <img src={science} alt="basket" className="imgmanager" />
     </SwiperSlide> 
 
 
     <SwiperSlide>
-        <img src={Banner} alt="banner" className="imgmanager" />
+        <img src={spaces} alt="banner" className="imgmanager" />
     </SwiperSlide> 
 
     <SwiperSlide>
-        <img src={Basket} alt="basket" className="imgmanager" />
+        <img src={lib2} alt="basket" className="imgmanager" />
     </SwiperSlide> 
 
     <SwiperSlide>
-        <img src={Banner} alt="banner" className="imgmanager" />
+        <img src={library} alt="banner" className="imgmanager" />
     </SwiperSlide>   
   </Swiper>
   )

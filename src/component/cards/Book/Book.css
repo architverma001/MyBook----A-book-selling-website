@@ -30,6 +30,16 @@
     text-align: start;
 }
 
+.MAIN:hover{
+    scale: 1.2;
+    margin-top: 50px!important;
+    margin-bottom: 50px;
+}
+
+.MAIN{
+ 
+  
+}
 .offer{
     font-size: 1.3rem !important;
     color: #1f55de !important;

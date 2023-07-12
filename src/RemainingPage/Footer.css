@@ -19,9 +19,18 @@
 }
 
 .w-18{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-right: 5px;
+   
+}
+.w-19{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    margin-right: 5px;
+    transform: rotate(20deg);
    
 }
 

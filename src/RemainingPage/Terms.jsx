@@ -7,7 +7,7 @@ function Terms() {
      <h2>Terms and Conditions</h2>
      <p className='mt-2 p-1'>
 Your website may use the Terms and Conditions given below.
-The terms "We" / "Us" / "Our"/”Company” individually and collectively refer to “LecturesBasket” and the terms "Visitor” ”User” refer to the users.</p>
+The terms "We" / "Us" / "Our"/”Company” individually and collectively refer to “MyBook” and the terms "Visitor” ”User” refer to the users.</p>
 <p>
 This page states the Terms and Conditions under which you (Visitor) may visit this website (“Website”). Please read this page carefully. If you do not accept the Terms and Conditions stated here, we would request you to exit this site. The business, any of its business divisions and / or its subsidiaries, associate companies or subsidiaries to subsidiaries or such other investment companies (in India or abroad) reserve their respective rights to revise these Terms and Conditions at any time by updating this posting. You should visit this page periodically to re-appraise yourself of the Terms and Conditions, because they are binding on all users of this Website.
 </p>
@@ -41,7 +41,7 @@ Visitors may not use the Web Site in order to transmit, distribute, store or des
 </p>
 <h4>INDEMNITY</h4>
 <p>
-The User unilaterally agree to indemnify and hold harmless, without objection, the Company, its officers, directors, employees and agents from and against any claims, actions and/or demands and/or liabilities and/or losses and/or damages whatsoever arising from or resulting from their use of Lecturesbasket.com or their breach of the terms 
+The User unilaterally agree to indemnify and hold harmless, without objection, the Company, its officers, directors, employees and agents from and against any claims, actions and/or demands and/or liabilities and/or losses and/or damages whatsoever arising from or resulting from their use of MyBook.com or their breach of the terms 
 </p>
 <h4>
 LIABILITY

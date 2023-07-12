@@ -6,14 +6,14 @@ const AboutUs = () => {
        <h2>About us</h2>
         
         <p>Welcome to our platform for the CA,CS and CMA courses
-Lecturesbasket is the superior online website which is providing the lectures of all the faculties of CA/CS/CMA .It is the platform in which you will find the top facilities with the affordable prices. The students will get their most liked facilities and with our flexible self paced courses students learn at their pace and schedules which is the important factor for the many students.
+MyBook is the superior online website which is providing the lectures of all the faculties of CA/CS/CMA .It is the platform in which you will find the top facilities with the affordable prices. The students will get their most liked facilities and with our flexible self paced courses students learn at their pace and schedules which is the important factor for the many students.
 </p> 
         <p>
         This website helps the students to achieve their goals by selecting the top notch faculties which have a strong track record.
          </p> 
 
         <p>
-        Lecturesbasket is especially convenient for students who may not able to attend classes in person who prefer the flexibility of the online lectures.
+        MyBook is especially convenient for students who may not able to attend classes in person who prefer the flexibility of the online lectures.
         </p>
            
 

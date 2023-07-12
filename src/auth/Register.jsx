@@ -36,8 +36,6 @@ const Register = () => {
       //get image url
       const url = await getDownloadURL(uploadTask.ref);
       //update profile
-     
-      console.log("ddor",url);
       await Promise.all([
         setDoc(doc(db, 'profile', Id), {
           name: displayName,
@@ -47,14 +45,15 @@ const Register = () => {
           profilePic: url,
           id: Id,
         })
+    
       ]);
   
       //Create a unique image name
-  
        setLoading(false)
        navigate('/')
     } catch (err) {
       setErr(true);
+      alert(err.message);
       setLoading(false);
     }
   };

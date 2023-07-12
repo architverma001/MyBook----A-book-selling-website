@@ -35,7 +35,7 @@ SECURITY PRECAUTIONS
 </h4>
 <p>
 
-Our website has clinical security measures for protecting the loss, misuse and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession we adhere to strict security guidelines, protecting it against unauthorized access. Lectures Basket reserves the right to refuse service to anyone at anytime.
+Our website has clinical security measures for protecting the loss, misuse and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession we adhere to strict security guidelines, protecting it against unauthorized access. MyBook reserves the right to refuse service to anyone at anytime.
 </p>
 
     </div>

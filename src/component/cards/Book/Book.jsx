@@ -3,7 +3,7 @@ import './Book.css'
 import { Navigate, useHistory ,useNavigate} from 'react-router-dom';
 import { AuthContext } from '../../../context/AuthContext';
 
-function Book(props) {
+function Book(props) { 
   const {currentUser}=useContext(AuthContext)
   const navigate = useNavigate();
   const handleclick=()=>{
@@ -18,7 +18,7 @@ function Book(props) {
     
   }
   return (
-    <div className='mt-3 ms-3' onClick={handleclick}>
+    <div className='mt-3 ms-3 MAIN' onClick={handleclick}>
     
     <div className=' ms-2 p-1 me-0  d-flex flex-column size bg-white'>
  <img src={props.img} className=' img-dynamics'/>

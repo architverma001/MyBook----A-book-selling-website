@@ -63,10 +63,10 @@ const Cod = () => {
     }
     emailjs
       .sendForm(
-        "service_yvnk47f",
-        "template_5v8xo7r",
+        "service_vy9spfn",
+        "template_bidqa7k",
         form.current,
-        "PCj6aiJDsN2VtUGFJ"
+        "mmyloZXwmWQ_xYqIn"
       )
       .then(
         (result) => {
@@ -80,6 +80,7 @@ const Cod = () => {
           
         },
         (error) => {
+          console.log("error")
           console.log(error.text);
         }
       );

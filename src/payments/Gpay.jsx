@@ -34,7 +34,7 @@ function Gpay(props) {
           razorpay_signature: generate(),
         };
         axios
-          .post('https://backendlecturebasket-production.up.railway.app/api/v1/payment/verify', postData)
+          .post('https://backend-ptyq.onrender.com/api/v1/payment/verify', postData)
           .then((res) => {
             console.log(res.data, 'Response');
             props.onSuccess();
@@ -52,7 +52,7 @@ function Gpay(props) {
   const handlePrice = async (amount) => {
     const data = { amount: amount*100 };
     axios
-      .post('https://backendlecturebasket-production.up.railway.app/api/v1/payment', data)
+      .post('https://backend-ptyq.onrender.com/api/v1/payment', data)
       .then((res) => {
         console.log(res.data, 'Response');
         handleOpenRazorpay(res.data);
